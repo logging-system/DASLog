@@ -1,12 +1,7 @@
-#sudo yum install mysql
-#mysql -h database-1.cdqsjcaidv6a.eu-west-2.rds.amazonaws.com -u C2C -p
-#pass= scs13SCS!#
-#pip install PyMySQL
-
 import pymysql
 
 #database config
-db = pymysql.connect(host='loggingdb.cdqsjcaidv6a.eu-west-2.rds.amazonaws.com', user='C2C', password='scs13SCS!#')
+db = pymysql.connect(host='your host name', user='your user name', password='your pass')
 cursor = db.cursor()
 
 #Create a database and table
