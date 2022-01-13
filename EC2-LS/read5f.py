@@ -11,9 +11,9 @@ def Read_Data(u_data, u_flag):
     msg = {'status': "true", 'ServerMessage': "message", 'clientdata': "logData"}
 
         # Connect to the database
-    db = pymysql.connect(host='loggingdb.cdqsjcaidv6a.eu-west-2.rds.amazonaws.com',
-                                user='C2C',
-                                password='scs13SCS!#',
+    db = pymysql.connect(host='your host name',
+                                user='your user name',
+                                password='your pass',
                                 charset='utf8mb4',
                                 cursorclass=pymysql.cursors.DictCursor)
     cursor = db.cursor()
@@ -28,19 +28,6 @@ def Read_Data(u_data, u_flag):
     sql3 = "SELECT `log_block_number` FROM `ELogTable` WHERE `lid`=%s"
 
     flight_ID = u_data['id'].encode('utf-8') + u_data['type'].encode('utf-8')
-
-    ''' Hash: old idea
-        # generate hash of the flight_ID
-    digest = hashes.Hash(
-        algorithm=hashes.SHA256(),
-        backend=default_backend()
-    )
-
-        # CREATE HASH of flight-id
-    digest.update(flight_ID)
-    hash_string = digest.finalize()
-    ilid = str(hash_string.hex())
-    '''
 
     # generate HMAC of the flight_ID: new ideai
     hkey = b'60436092257359180159959298694639776512348204677813211341147137887844449615112'
