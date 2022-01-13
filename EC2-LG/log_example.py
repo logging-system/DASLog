@@ -239,7 +239,7 @@ def logs():
         operatorId: null
         pilotPosition: null
         providerExtraDetails: null
-        providerId: Helicus
+        providerId: X
         registrationId: null
         status: null
         telemetry: null
