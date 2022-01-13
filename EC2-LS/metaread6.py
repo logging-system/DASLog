@@ -6,7 +6,7 @@ import base64
 import pymysql
 import json
 
-db = pymysql.connect(host='loggingdb.cdqsjcaidv6a.eu-west-2.rds.amazonaws.com', user='C2C', password='scs13SCS!#')
+db = pymysql.connect(host='your host name', user='your user name', password='your pass')
 cursor = db.cursor()
 
 cursor.connection.commit()
@@ -18,20 +18,6 @@ with open('log_example.json', 'r') as f:
     lines = f.read()
 l_data = json.loads(lines)
 flight_ID = l_data['id'].encode('utf-8') + l_data['type'].encode('utf-8')
-
-''' Hash: old idea
-# generate hash of the flight_ID
-digest = hashes.Hash(
-    algorithm=hashes.SHA256(),
-    backend=default_backend()
-)
-
-# CREATE HASH of flight-id
-digest.update(flight_ID)
-hash_string = digest.finalize()
-ilid = str(hash_string.hex())
-# print('ilid=',ilid)
-'''
 
 # generate HMAC of the flight_ID: new idea
 hkey = b'60436092257359180159959298694639776512348204677813211341147137887844449615112'
