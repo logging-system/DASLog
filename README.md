@@ -100,4 +100,4 @@ Setting up process of MySQL database on AWS RDS is defined as following:
 * Click on create database
 * Wait for 5 minutes to open up
 * When it is run, be sure that database is located in a VPC that has a security group which accepts traffic to TCP port 3306.
-* run `python3 RDS_config.py` to create a database and table.
+* run `python3 RDS-tables-config.py` to create a database and table.
