@@ -26,6 +26,6 @@ for x in range(len(ldata)):
         X_token = "tokens: {'Content-Type': '%s', 'AuthToken': '%s'}"%(Content_Type, AuthToken)
 
         t = time.time()
-        os.system('curl -H "%s" --request POST --data @data_hai.json http://13.40.67.209:5000/KUL/hai/write' % X_token)
+        os.system('curl -H "%s" --request POST --data @data_hai.json http://13.40.67.209:5000/Anonymous/write' % X_token)
         elapsed_time = time.time() - t
         #print('time =', elapsed_time)
