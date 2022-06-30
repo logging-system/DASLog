@@ -11,7 +11,7 @@ def Read_Data(u_data, u_flag):
     msg = {'status': "true", 'ServerMessage': "message", 'clientdata': "logData"}
 
         # Connect to the database
-    db = pymysql.connect(host='loggingdb.cdqsjcaidv6a.eu-west-2.rds.amazonaws.com',
+    db = pymysql.connect(host='loggingdb.cdqsjcaidv6a.Anonymous.rds.amazonaws.com',
                                 user='C2C',
                                 password='scs13SCS!#',
                                 charset='utf8mb4',
