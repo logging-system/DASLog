@@ -5,7 +5,7 @@ print('requesting the token for data consumer')
 # Configure client
 keycloak_openid = KeycloakOpenID(server_url="http://localhost:8080/auth/",
                     client_id="fa-console",
-                    realm_name="HAI-SCS",
+                    realm_name="Anonymous",
                     client_secret_key="0459cceb-bbc3-415c-92a9-0f557774b5bb",
                     verify=True)
 
@@ -13,8 +13,6 @@ keycloak_openid = KeycloakOpenID(server_url="http://localhost:8080/auth/",
 config_well_know = keycloak_openid.well_know()
 
 # Get Token
-#token = keycloak_openid.token("esat-cosic", "zaq123ZAQ!@#")
-#token = keycloak_openid.token("c2c", "helicus")
 token = keycloak_openid.token("u1", "u1u1u1")
 #token = keycloak_openid.token("u2", "u2u2u2")
 #token = keycloak_openid.token("u3", "u3u3u3")
