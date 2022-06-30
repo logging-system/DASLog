@@ -11,7 +11,7 @@ from subprocess import call
 import pymysql
 
 #added for the new merkle tree idea 9/6/2022
-db = pymysql.connect(host='loggingdb.cdqsjcaidv6a.eu-west-2.rds.amazonaws.com', user='C2C', password='scs13SCS!#')
+db = pymysql.connect(host='loggingdb.cdqsjcaidv6a.eu-west-2.rds.Anonymous.com', user='C2C', password='scs13SCS!#')
 cursor = db.cursor()
 
 cursor.connection.commit()
