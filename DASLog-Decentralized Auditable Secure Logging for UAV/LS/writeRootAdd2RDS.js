@@ -1,9 +1,8 @@
 const Web3=require('web3');
 const Box = require('./build/contracts/Box.json');
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-//const address = '0xfe3b557e8fb62b89f4916b721be55ceb828dbd73';
 
-const web3 = new Web3('http://18.133.191.37:8545');
+const web3 = new Web3('http://Anonymous:8545');
 const deployedNetwork = Box.networks[1994];
 const contract = new web3.eth.Contract(
         Box.abi,
