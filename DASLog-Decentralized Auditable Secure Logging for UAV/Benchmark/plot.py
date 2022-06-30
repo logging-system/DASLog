@@ -21,8 +21,8 @@ plt.grid()
 plt.xticks(np.arange(0,10001,1000))
 
 # set label
-plt.xlabel('Number of Log records', fontsize=18)
-plt.ylabel('Proof generation time (s)', fontsize=18)
+plt.xlabel('Number of log records', fontsize=18)
+plt.ylabel('Log processing time (sec)', fontsize=18)
 
 plt.legend(fontsize=12)
 plt.show()
@@ -35,18 +35,18 @@ df2 = pd.read_excel('tree_sheets_b.xlsx', 'df_2')
 df5 = pd.read_excel('tree_sheets_bhc.xlsx', 'df_5')
 xnew2 = np.linspace(df2['C'].min(), df2['C'].max(), 8)
 f_cubic2 = interp1d(df2['C'], df2['B'], kind='cubic')
-plt.plot(xnew2, f_cubic2(xnew2), '--^', label='Hashchain+Merkle tree', linewidth=3)
+plt.plot(xnew2, f_cubic2(xnew2), '--^', label='Hash-chain proof +Single proof', linewidth=3)
 plt.scatter(xnew2, f_cubic2(xnew2), s=100)
 xnew5 = np.linspace(df5['C'].min(), df5['C'].max(), 8)
 f_cubic5 = interp1d(df5['C'], df5['Bhc'], kind='cubic')
-plt.plot(xnew5, f_cubic5(xnew5), '--^', label='Hashchain', linewidth=3)
+plt.plot(xnew5, f_cubic5(xnew5), '--^', label='Hash-chain proof', linewidth=3)
 plt.scatter(xnew5, f_cubic5(xnew5), s=100, marker='^')
 plt.grid()
 plt.xticks(np.arange(0,10001,1000))
 
 # set label
-plt.xlabel('Number of Log records', fontsize=18)
-plt.ylabel('verification time (s)', fontsize=18)
+plt.xlabel('Number of log records', fontsize=18)
+plt.ylabel('Verification time (sec)', fontsize=18)
 #plt.title('Logging system project')
 plt.legend(fontsize=12)
 plt.show()
@@ -71,8 +71,8 @@ plt.grid()
 plt.xticks(np.arange(0,10001,1000))
 
 # set label
-plt.xlabel('Number of Log records', fontsize=18)
-plt.ylabel('Proof Size (KB)', fontsize=18)
+plt.xlabel('Number of log records', fontsize=18)
+plt.ylabel('Merkle tree size (KB)', fontsize=18)
 #plt.title('Logging system project')
 plt.legend(fontsize=12)
 plt.show()
@@ -81,5 +81,3 @@ fig.savefig('ps.png')
 #'''
 
 fig.savefig('multipleplots.png')
-
-
