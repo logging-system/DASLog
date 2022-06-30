@@ -61,7 +61,7 @@ def Token_val(R_W, Content_Type, accessid_token, data):
         return error
     except ValueError:
         print("Oops!  That was no valid request.  Try again...")
-@app.route('/KUL/hai/write', methods = ['POST'])
+@app.route('/Anonymous/write', methods = ['POST'])
 def determine_escalation1():
     R_W = 'w'
     #global L_N
@@ -76,7 +76,7 @@ def determine_escalation1():
         error.update(errorMessage='UnAuthorizedUser')
         return json.dumps(error)
 
-@app.route('/KUL/hai/read', methods = ['POST'])
+@app.route('/Anonymous/read', methods = ['POST'])
 def determine_escalation2():
     R_W = 'r'
     jsondata = request.get_data()
@@ -90,7 +90,5 @@ def determine_escalation2():
         error.update(errorMessage='UnAuthorizedUser')
         return json.dumps(error)
 
-#if __name__ == '__main__':
-    #app.run()
 if __name__ == '__main__':
     app.run(port=5000, host='0.0.0.0')
