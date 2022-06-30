@@ -2,7 +2,7 @@ const abiDecoder=require('abi-decoder');
 const Web3=require('web3');
 const Box = require('./build/contracts/Box.json');
 abiDecoder.addABI(Box.abi);
-const web3 = new Web3('http://18.133.191.37:8545');
+const web3 = new Web3('http://Anonymous:8545');
 
 const readProof =async (transactionHash) => {
     let transaction= await web3.eth.getTransaction(transactionHash);
