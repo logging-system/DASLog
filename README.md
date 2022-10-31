@@ -1,4 +1,4 @@
-# POC of DASLog: Decentralized Auditable SecurityLogging for UAV Ecosystems
+# PoC of DASLog: Decentralized Auditable SecurityLogging for UAV Ecosystems
 
 # AWS EC2 Instance Configuration
 
