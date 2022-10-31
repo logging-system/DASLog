@@ -55,8 +55,8 @@ In our demonstration, all other nodes except the bootnode should have the below 
 * `nvm install node`
 * `npm install -g truffle`
 * `npm install --save @truffle/hdwallet-provider`
-# Smart contract needs to be deployed on the BESU blockchain
-* Deploy `Box.sol` on blockchain by running `truffle migrate --network besuWallet` command on operator EC2 instance
+## Smart contract needs to be deployed on the BESU blockchain
+* Deploy `Box.sol` on blockchain by running `truffle migrate --network besuWallet` command on operator EC2 instance (see files in truffleProject folder)
 # Steps must be done in the Operator, Data Consumer and Data Source components
 ## Operator
 * Copy files and folders in this instance
